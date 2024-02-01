@@ -32,8 +32,6 @@
         top: 0px;
         left: 0px;
         overflow: hidden;
-        // border: 1px solid red;
-        // background-color: rgb(243, 235, 235);
         background: rgb(219, 242, 255);
         background: linear-gradient(173deg, rgba(219, 242, 255, 1) 0%, rgba(220, 235, 241, 1) 32%, rgba(249, 249, 249, 1) 49%, rgba(246, 246, 246, 1) 100%);
         display: grid;
@@ -106,12 +104,10 @@
             grid-row: 2;
             width: 100%;
             height: 100%;
-            // background-color: red;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
             .sistema {
-                // border: 1px solid black;
                 width: 100%;
                 height: min-content;
                 display: flex;
@@ -130,8 +126,6 @@
                     filter: invert(0.4);
                 }
 
-
-
                 &:hover {
                     transition: 0.2s all;
                     transform: scale(1.1);
@@ -147,12 +141,14 @@
         overflow: hidden;
         z-index: 2;
 
+
         nav {
             position: relative;
             display: flex;
             justify-content: space-between;
             padding: 10px 50px;
             height: 50px;
+            margin-top: 10px;
 
             .left {
                 width: 200px;
@@ -171,7 +167,7 @@
                 gap: 50px;
 
                 .btn-contact {
-                    padding: 15px 30px;
+                    padding: 15px 15px;
                     border-radius: 5px;
                     font-size: 0.9em;
                     background-color: rgb(41, 92, 131);
@@ -201,26 +197,26 @@
 
     //Separador
     .separador_1 {
-        width: 99vw;
-        height: 1vh;
-        border-bottom: 10vh solid white;
-        border-left: 100vw solid #f6f6f6;
-        z-index: 3;
         position: absolute;
-        top: 0;
+        top: -100px;
         left: 0px;
-
+        width: 99vw;
+        height: 100px;
+        background: rgb(246, 246, 246);
+        z-index: 2;
+        background: linear-gradient(177deg, rgba(246, 246, 246, 0) 0%, rgba(246, 246, 246, 0) 45%, rgba(255, 255, 255, 1) 46%, rgba(255, 255, 255, 1) 100%);
     }
 
     // Section 2
     .section_2 {
+        margin-top: 50px;
         position: relative;
         width: 99vw;
         height: 100vh;
         background-color: white;
         z-index: 2;
         display: grid;
-        grid-template-columns: 70% 30%;
+        grid-template-columns: 50% 50%;
         padding: 0px 0px 100px 0px;
 
         .left,
@@ -229,32 +225,66 @@
             height: 100%;
             @include center();
             text-align: justify;
+            font-family: 'Roboto', sans-serif;
             font-size: 1.1em;
             overflow: hidden;
+            z-index: 2;
         }
 
         .left {
-            .content {
-                padding: 150px 150px 150px 50px;
-                border-radius: 0px  50% 50% 0px;
-                width: 100%;
-                max-width: 700px;
-                display: flex;
-                flex-direction: column;
-                background-color: rgb(248, 248, 248);
-                .title {
-                    // font-family: 'Playfair Display', serif;
-                    font-size: 1.6em;
-                    font-weight: bold;
-                    margin-bottom: 50px;
+            .content-animation-border {
+                padding: 2px 2px 2px 0px;
+                border-radius: 0px 5px 5px 0px;
+                background: rgb(141, 186, 203);
+                background: linear-gradient(90deg, rgba(141, 186, 203, 1) 0%, rgba(184, 221, 249, 1) 12%, rgba(77, 128, 167, 1) 29%, rgba(249, 251, 252, 1) 53%, rgba(162, 199, 240, 1) 73%, rgba(138, 185, 237, 1) 85%, rgba(249, 251, 252, 1) 97%, rgba(255, 255, 255, 1) 100%);
+                background-size: 400% 400%;
+                animation: animation-background-border 15s ease infinite;
+
+                @keyframes animation-background-border {
+                    0% {
+                        background-position: 50% 50%;
+                    }
+
+                    40% {
+                        background-position: 100% 50%;
+                    }
+
+                    60% {
+                        background-position: 0% 50%;
+                    }
+
+                    100% {
+                        background-position: 50% 50%;
+                    }
                 }
 
-                flex-direction: column;
-                grid-column: 1;
-                letter-spacing: 0.05em;
-                font-weight: 500;
-                align-items: baseline;
+                .content {
+                    padding: 100px 150px 100px 50px;
+                    border-radius: 0px 5px 5px 0px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: rgb(255, 255, 255);
 
+                    .title {
+                        font-family: 'Mukta', sans-serif;
+                        font-size: 1.6em;
+                        font-weight: bold;
+                        margin-bottom: 50px;
+                        color: rgb(82, 134, 174);
+                    }
+
+                    .normal-text {
+                        font-size: 1.3em;
+                        font-family: 'Mukta', sans-serif;
+
+                    }
+
+                    flex-direction: column;
+                    grid-column: 1;
+                    align-items: baseline;
+
+                }
             }
         }
 
@@ -266,6 +296,97 @@
                 border-radius: 10px;
                 width: auto;
                 height: 90%;
+            }
+        }
+
+        .bloque-patron {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 60%;
+            z-index: 1;
+            height: 60%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.17'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    }
+
+    .section_3 {
+        position: relative;
+        width: 99vw;
+        height: 100vh;
+        background-color: white;
+        background-image: url("../../../assets/background_section3.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 2;
+
+        .line {
+            width: 100%;
+            height: 2px;    
+            background-color: rgb(240, 240, 240);
+            border: 2px dashed rgb(108, 161, 202);
+        }
+
+        .content-alertas {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .left,
+            .right,
+            .center {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+
+                .container {
+                    z-index: 2;
+                    position: relative;
+                    border-radius: 5px;
+                    width: 80%;
+                    height: 70%;
+                    background-color: rgb(243, 243, 243);
+                    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.111);
+                    display: flex;
+                    flex-direction: column;
+
+                    .imagen_container {
+                        width: 100%;
+                        height: 50%;
+                        border-radius: 5px;
+                    }
+
+                    .container-content {
+                        border-top: 2px dashed rgb(108, 161, 202);
+                        padding: 20px;
+
+                        .title {
+                            font-size: 1.3em;
+                            color: rgb(98, 164, 215);
+                        }
+
+                        .content {
+                            margin-top: 50px;
+                            font-size: 1.1em;
+                            font-family: 'Mukta', sans-serif;
+                            letter-spacing: 0.05em;
+                        }
+                    }
+
+                    .circle {
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                        bottom: -50px;
+                        right: -50px;
+                        z-index: 2;
+                        border-radius: 50%;
+                        background: rgb(249, 251, 252);
+                        background: linear-gradient(137deg, rgba(249, 251, 252, 1) 0%, rgba(233, 242, 250, 1) 28%, rgba(162, 199, 240, 1) 61%, rgba(138, 185, 237, 1) 94%, rgba(147, 191, 238, 1) 100%);
+                    }
+                }
             }
         }
     }
