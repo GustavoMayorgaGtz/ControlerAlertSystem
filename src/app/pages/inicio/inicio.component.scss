@@ -11,7 +11,7 @@
 
 .mark_type1 {
     font-weight: bold;
-    text-decoration: underline;
+    // text-decoration: underline;
 }
 
 .title_section {
@@ -70,19 +70,42 @@
             flex-direction: column;
 
             .title {
+                margin-top: 10%;
                 margin-left: 10%;
                 color: rgb(98, 164, 215);
-                font-size: calc(0.8vw + 12px);
+                font-size: calc(0.9vw + 16px);
                 font-weight: bold;
 
             }
 
             .encabezado {
-                margin-top: 80px;
+                margin-top: 30px;
                 margin-left: 10%;
-                font-size: 1.5em;
+                font-size: calc(0.8vw + 12px);
                 color: rgb(67, 67, 67);
             }
+            .toAction{
+                margin-top: 40px;
+                margin-left: 10%;
+                max-width: 200px;
+                padding: 10px 20px;
+                background-color: rgb(0, 149, 255);
+                color: white;
+                border-radius: 5px;
+                @include center();
+            }
+
+            .question{
+                margin-top: 40px;
+                margin-left: 10%;
+                color: rgb(0, 0, 0);
+                font-size: 1em;
+                font-weight: bold;
+                .toForm{
+                    color: rgb(0, 149, 255);
+                }
+            }
+
         }
 
         .right {
@@ -132,22 +155,28 @@
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
             .sistema {
-                width: 100%;
-                height: min-content;
+                width: 60px;
+                height: 60px;
+                margin: auto;
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 justify-content: center;
                 align-items: center;
                 color: rgb(82, 134, 174);
-                font-size: 1.2em;
+                font-size: 0.7em;
                 font-weight: bold;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.038);
 
                 .logo {
-                    margin-top: 20px;
+                    position: absolute;
+                    
                     min-width: 35px;
                     min-height: 35px;
-                    filter: invert(0.4);
+                    opacity: 0.4;
+                  
                 }
 
                 &:hover {
@@ -235,8 +264,8 @@
     .section_2 {
         margin-top: 50px;
         position: relative;
-        width: 99vw;
-        height: 100vh;
+        width: 100vw;
+        height: min-content;
         background-color: white;
         z-index: 2;
         display: grid;
@@ -256,54 +285,64 @@
         }
 
         .left {
+            // height: 100vh;
             .content-animation-border {
                 padding: 2px 2px 2px 0px;
                 border-radius: 0px 5px 5px 0px;
-                background: rgb(141, 186, 203);
-                background: linear-gradient(90deg, rgba(141, 186, 203, 1) 0%, rgba(184, 221, 249, 1) 12%, rgba(77, 128, 167, 1) 29%, rgba(249, 251, 252, 1) 53%, rgba(162, 199, 240, 1) 73%, rgba(138, 185, 237, 1) 85%, rgba(249, 251, 252, 1) 97%, rgba(255, 255, 255, 1) 100%);
-                background-size: 400% 400%;
-                animation: animation-background-border 15s ease infinite;
+                // background: rgb(141, 186, 203);
+                // background: linear-gradient(90deg, rgba(141, 186, 203, 1) 0%, rgba(184, 221, 249, 1) 12%, rgba(77, 128, 167, 1) 29%, rgba(249, 251, 252, 1) 53%, rgba(162, 199, 240, 1) 73%, rgba(138, 185, 237, 1) 85%, rgba(249, 251, 252, 1) 97%, rgba(255, 255, 255, 1) 100%);
+                // background-size: 400% 400%;
+                // // height: 100vh;
+                // animation: animation-background-border 15s ease infinite;
 
-                @keyframes animation-background-border {
-                    0% {
-                        background-position: 50% 50%;
-                    }
+                // @keyframes animation-background-border {
+                //     0% {
+                //         background-position: 50% 50%;
+                //     }
 
-                    40% {
-                        background-position: 100% 50%;
-                    }
+                //     40% {
+                //         background-position: 100% 50%;
+                //     }
 
-                    60% {
-                        background-position: 0% 50%;
-                    }
+                //     60% {
+                //         background-position: 0% 50%;
+                //     }
 
-                    100% {
-                        background-position: 50% 50%;
-                    }
-                }
+                //     100% {
+                //         background-position: 50% 50%;
+                //     }
+                // }
 
                 .content {
                     padding: 100px 150px 100px 50px;
                     border-radius: 0px 5px 5px 0px;
                     width: 100%;
+                    // height: 100vh;
                     display: flex;
                     flex-direction: column;
                     background-color: rgb(255, 255, 255);
+                    .header-title{
+                        font-family: 'Mukta', sans-serif;
+                        color: rgb(66, 66, 66);
+                        font-size: calc(0.5vw + 9px);
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
 
                     .title {
                         font-family: 'Mukta', sans-serif;
                         color: rgb(98, 164, 215);
-                        font-size: calc(0.7vw + 9px);
+                        font-size: calc(1.3vw + 16px);
                         font-weight: bold;
-                        margin-bottom: 50px;
+                        margin-bottom: 10px;
                     }
 
                     .normal-text {
 
-                        font-size: calc(0.5vw + 6px);
+                        font-size: calc(0.6vw + 7px);
                         letter-spacing: 0.05em;
 
-                        font-family: 'Mukta', sans-serif;
+                        // font-family: 'Mukta', sans-serif;
 
                     }
 
@@ -316,17 +355,22 @@
         }
 
         .right {
-            padding: 10%;
+            // padding: 10%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: red;
             grid-column: 2;
 
             .alertas2 {
-                border: 1px solid rgb(195, 195, 195);
-                background-color: white;
-                padding: 10px;
-                box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.116);
-                border-radius: 10px;
-                width: auto;
-                height: 90%;
+                // box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.116);
+                // border-radius: 12% 88% 7% 93% / 89% 21% 79% 11%;
+                width: 50%;
+                height: auto;
+                height: max-content;
+                
+                
             }
         }
 
