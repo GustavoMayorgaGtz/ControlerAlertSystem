@@ -699,7 +699,7 @@
                 }
 
                 .toAction {
-                    margin-top: 20px;
+                    margin-top: 30px;
                     max-width: 300px;
                     width: min-content;
                     padding: 10px 20px;
@@ -710,7 +710,7 @@
                     @include center();
                     transition: all 0.2s;
 
-                    &:hover{
+                    &:hover {
                         transition: all 0.2s;
                         cursor: pointer;
                         transform: scale(1.02);
@@ -718,26 +718,52 @@
                 }
             }
 
-            .content {
-                margin-left: 10%;
-                font-size: calc(0.6vw + 8px);
-                letter-spacing: 0.05em;
+            .left:nth-child(2) {
+                padding-left: 50px;
             }
-
         }
 
+        .right:nth-child(1){
+            border-left: 2px solid rgb(198, 198, 198);
+            border-bottom: 2px solid rgb(198, 198, 198);
+        }
+        .right:nth-child(2){
+            border-right: 2px solid rgb(198, 198, 198);
+            border-top: 2px solid rgb(198, 198, 198);
+        }
+        .left:nth-child(1){
+            border-right: 1px solid rgb(198, 198, 198);
+            border-bottom: 1px solid rgb(198, 198, 198);
+        }
+        .left:nth-child(2){
+            border-left: 1px solid rgb(198, 198, 198);
+            border-top: 1px solid rgb(198, 198, 198);
+        }
         .right {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
             height: 100%;
-            border: 1px solid rgb(198, 198, 198);
-            border-radius: 10px;
+            padding: 5%;
+            box-sizing: border-box;
+            overflow: hidden;
+           
 
-            img {
-                width: 40%;
-                height: auto // margin-bottom: 20px;
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                box-sizing: border-box;
+                overflow: hidden;
+                height: 100%;
+                border-radius: 10px;
+
+                img {
+                    width: 40%;
+                    height: auto // margin-bottom: 20px;
+                }
             }
         }
 
@@ -797,10 +823,11 @@
     position: relative;
     width: 100vw;
     min-height: 30vw;
+    max-height: 60vh;
     height: max-content;
     overflow: hidden;
     padding: 50px 0px 0px 0px;
-    background-color: rgb(243, 243, 243);
+    background-color: #333333;
     z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
@@ -811,62 +838,93 @@
         width: 100vw;
         height: 100%;
         grid-row: 1;
-    }
-
-    .formulario {
-        border-radius: 5px;
-        width: 100vw;
-        height: 100%;
-        padding: 20px 20%;
-        margin: auto;
-        grid-column: 1;
-        grid-row: 2;
+        color: white;
         background-color: #333333;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        .left {
-            border-radius: 5px 0px 0px 5px;
-            // background-color: rgba(255, 255, 255, 0.098);
-            padding: 20px;
-
-            .campo {
-                margin-bottom: 20px;
-                display: flex;
-                flex-direction: column;
-
-                label {
-                    color: white;
-                    font-size: calc(0.5vw + 6px);
-                    margin-bottom: 10px;
-                }
-
-                input {
-                    margin-top: 5px;
-                    width: 90%;
-                    height: 35px;
-                    border-radius: 5px;
-                    outline: none;
-                    border: none;
-                    padding: 5px;
-                }
-
-                textarea {
-                    margin-top: 5px;
-                    padding: 5px;
-                    width: 90%;
-                    height: 200px;
-                    border-radius: 5px;
-                    outline: none;
-                    border: none;
-                }
-            }
-        }
-
-        .right {
-            border-radius: 0px 5px 5px 10%;
-            padding: 20px;
-            // background-color: rgba(255, 255, 255, 0.394);
-        }
     }
+
+    .content
+    {
+       box-sizing: border-box;
+       padding: 50px;
+       width: 100%;
+       height: 100%;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+
+       .category{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .category:nth-child(1){
+        border-right: 1px solid white;
+       }
+       .category:nth-child(2){
+        border-right: 1px solid white;
+       }
+       .category:nth-child(3){
+        border-right: 1px solid white;
+       }
+    }
+
+
+    // .formulario {
+    //     background-image: url("../../../assets/wave.svg");
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     border-radius: 5px;
+    //     width: 100vw;
+    //     height: 100%;
+    //     padding: 20px 20%;
+    //     margin: auto;
+    //     grid-column: 1;
+    //     grid-row: 2;
+    //     background-color: #333333;
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+
+    //     .left {
+    //         border-radius: 5px 0px 0px 5px;
+    //         // background-color: rgba(255, 255, 255, 0.098);
+    //         padding: 20px;
+
+    //         .campo {
+    //             margin-bottom: 20px;
+    //             display: flex;
+    //             flex-direction: column;
+
+    //             label {
+    //                 color: white;
+    //                 font-size: calc(0.5vw + 6px);
+    //                 margin-bottom: 10px;
+    //             }
+
+    //             input {
+    //                 margin-top: 5px;
+    //                 width: 90%;
+    //                 height: 35px;
+    //                 border-radius: 5px;
+    //                 outline: none;
+    //                 border: none;
+    //                 padding: 5px;
+    //             }
+
+    //             textarea {
+    //                 margin-top: 5px;
+    //                 padding: 5px;
+    //                 width: 90%;
+    //                 height: 200px;
+    //                 border-radius: 5px;
+    //                 outline: none;
+    //                 border: none;
+    //             }
+    //         }
+    //     }
+
+    //     .right {
+    //         border-radius: 0px 5px 5px 10%;
+    //         padding: 20px;
+    //         // background-color: rgba(255, 255, 255, 0.394);
+    //     }
+    // }
 }
