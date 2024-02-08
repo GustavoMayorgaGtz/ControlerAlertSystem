@@ -52,9 +52,9 @@
                 <img src="./assets/logo.png">
             </div>
             <div class="right">
-                <div class="simple_button">Tienda</div>
+                <div class="simple_button" (click)="store_event">Tienda</div>
                 <div class="simple_button">Acerca de nosotros</div>
-                <div class="btn-contact">Contactanos!</div>
+                <div class="btn-contact" ><a href="https://api.whatsapp.com/send/?phone=5218713659940&text=Buenas+tardes%2C+necesito+informaci%C3%B3n+acerca+de+las+alertas+personalizadas&type=phone_number&app_absent=0">Contactanos</a></div>
             </div>
         </nav>
     </div>
@@ -271,7 +271,7 @@
     </div>
 
 
-   
+
 
 
     <!-- En esta seccion se coloca las integraciones, viewport de 100vh -->
@@ -294,10 +294,11 @@
                     tiempo
                     real de los datos eléctricos, energéticos, gas, agua y un sistema de reportes.
                 </div>
-                <div class="toAction">Conocer Schneider Electric</div>
+                <div class="toAction" (click)="schneider_electric_event()">Conocer Schneider Electric</div>
             </div>
             <div class="right">
-                <div class="content"  style="background: rgb(249, 251, 252);
+                <div class="content"
+                    style="background: rgb(249, 251, 252);
                 background: linear-gradient(137deg, rgba(249, 251, 252, 1) 0%, rgba(233, 242, 250, 1) 28%, rgba(181, 215, 198, 1) 61%, rgba(105, 179, 140, 1) 94%, rgba(104, 181, 141, 1) 100%);">
                     <img src="./assets/SE.png">
                 </div>
@@ -305,10 +306,11 @@
         </div>
         <div class="container-primary">
             <div class="right">
-            <div class="content"  style="background: rgb(249,251,252);
+                <div class="content"
+                    style="background: rgb(249,251,252);
             background: linear-gradient(137deg, rgba(249,251,252,1) 0%, rgba(233,242,250,1) 28%, rgba(242,207,165,1) 61%, rgba(254,199,135,1) 94%, rgba(255,189,111,1) 100%);">
-                <img src="./assets/inductive-automation-logo.b565238b0b65.png">
-            </div>
+                    <img src="./assets/inductive-automation-logo.b565238b0b65.png">
+                </div>
             </div>
             <div class="left">
                 <span class="header-title">Inductive Automation</span>
@@ -320,7 +322,7 @@
                     sistemas de alerta y capacidades de gestión, proporcionando así una experiencia completa para el
                     usuario.
                 </div>
-                <div class="toAction">Inductive Automation</div>
+                <div class="toAction" (click)="inductive_automation_event()">Inductive Automation</div>
             </div>
         </div>
 
@@ -343,7 +345,7 @@
 
         </div> -->
     </div>
-     <!-- En esta seccion se coloca las integraciones, viewport de 100vh -->
+    <!-- En esta seccion se coloca las integraciones, viewport de 100vh -->
     <div class="section_7">
         <section class="title_section">
             <span class="title">Historias de exito</span>
@@ -359,42 +361,25 @@
 
     <!-- En esta seccion se coloca las integraciones, viewport de 100vh -->
     <div class="section_8">
-        <section class="title_section">
-            <span class="title">¡Cuéntanos tu problema con las alertas para poder brindarte una solución!</span>
-            <br>
-            <div class="subtitle">Contactanos</div>
+        <span class="title">¡Cuéntanos tu problema con las alertas para poder brindarte una solución!</span>
+        <section class="content">
+            <div class="flex">
+                <a href="tel:+8713659940" class="phone">
+                    Llamar al número
+                </a>
+                <a class="whatsapp"
+                    href="https://api.whatsapp.com/send/?phone=5218713659940&text=Buenas+tardes%2C+necesito+informaci%C3%B3n+acerca+de+las+alertas+personalizadas&type=phone_number&app_absent=0">Whatsapp</a>
+                <div class="redes">
+                    <img src="./assets/facebook.png" (click)="facebook_event()">
+                    <img src="./assets/instagram.png" (click)="instagram_event()">
+                </div>
+                <div class="controler">
+                    <img src="./assets/logo.png">
+                </div>
+            </div>
         </section>
-        <div class="content">
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
-            <div class="category"></div>
+        <div class="credits">
+            by Gustavo Mayorga
         </div>
-        <!-- <div class="formulario">
-            <div class="left">
-                <div class="campo">
-                    <label>Correo Electronico</label>
-                    <input type="text" name="email" id="email">
-                </div>
-                <div class="campo">
-                    <label>Nombre</label>
-
-                    <input type="text" name="name" id="name">
-                </div>
-                <div class="campo">
-                    <label>Asunto</label>
-                    <input type="text" name="subject" id="subject">
-                </div>
-                <div class="campo">
-                    <label>Mensaje</label>
-                    <textarea type="text" name="message" id="message" placeholder=""></textarea>
-                </div>
-
-            </div>
-            <div class="right">
-
-            </div>
-        </div> -->
-       
     </div>
 </div>
