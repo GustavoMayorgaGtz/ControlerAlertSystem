@@ -31,7 +31,10 @@
         justify-content: center;
         align-items: center;
         text-align: justify;
-        font-size: calc(0.7vw + 9px);
+        font-size: calc(1vw + 16px);
+    }
+    .subtitle{
+        font-size: calc(0.6vw + 10px);
     }
 }
 
@@ -230,6 +233,11 @@
                     color: white;
                     cursor: pointer;
                     transition: 0.2s all;
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
 
                     &:hover {
                         transform: scale(1.1);
@@ -454,7 +462,8 @@
     .section_4 {
         position: relative;
         width: 99vw;
-        height: 100vh;
+        min-height: 100vh;
+        height: min-content;
         background-color: white;
         background-image: url("../../../assets/background_section4.svg");
         background-size: cover;
@@ -475,6 +484,8 @@
             .alerta-img {
                 width: auto;
                 height: 90%;
+                max-height: 90vh;
+
                 border-radius: 84% 16% 72% 28% / 16% 84% 16% 84%;
             }
         }
@@ -581,6 +592,40 @@
                     transition: 0.5s all;
                     transform: scale(1.01);
                     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.071);
+                }
+            }
+
+            .ventaja:nth-child(1){
+                position: relative;
+                .detalle2{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    top: -50px;
+                    right: -50px;
+
+                    img{
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+
+            
+            .ventaja:nth-child(2){
+                position: relative;
+                .detalle2{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    bottom: -50px;
+                    left: -50px;
+
+                    img{
+                        transform: rotate(180deg);
+                        width: 100px;
+                        height: 100px;
+                    }
                 }
             }
 
