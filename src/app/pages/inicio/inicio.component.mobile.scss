@@ -48,22 +48,22 @@
     }
 
     nav {
-        width: 80px;
+        width: 40px;
+        height: 40px;
         background-color: rgba(255, 255, 255, 0.387);
         backdrop-filter: blur(2px);
-        z-index: 10;
         position: fixed;
         top:0px;
         right: 0px;
         display: flex;
+        z-index: 10;
         justify-content: space-between;
-        padding: 5px;
-        overflow: hidden;
-        height: 80px;
         border:none;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
+        // border-left: 1px solid black;
+        // border-bottom: 1px solid black;
         border-radius: 0px 0px 0px 10px;
+        padding: 5px ;
+        overflow: hidden;
 
 
         .left {
