@@ -1,5 +1,5 @@
-<div class="primary-container">
-    <nav>
+<div class="primary-container" #primary>
+    <nav (click)="menu_event(menu)">
         <img src="./assets/burger-menu-icon.svg" alt="menu" class="burger-menu-icon">
         <div class="left">
             <img src="./assets/logo.png">
@@ -8,10 +8,37 @@
             <div class="simple_button" (click)="store_event()">Tienda</div>
             <div class="simple_button">Acerca de nosotros</div>
             <div class="btn-contact"><a
-                    href="https://api.whatsapp.com/send/?phone=5218713659940&text=Buenas+tardes%2C+necesito+informaci%C3%B3n+acerca+de+las+alertas+personalizadas&type=phone_number&app_absent=0">Contactanos</a>
+                    href="https://api.whatsapp.com/send/?phone=5218713166635&text=Buenas+tardes%2C+necesito+informaci%C3%B3n+acerca+de+las+alertas+personalizadas&type=phone_number&app_absent=0">Contactanos</a>
             </div>
         </div>
     </nav>
+    <div class="menu menu-close" #menu>
+        <div class="container">
+            <div class="option" (click)="store_event()">Tienda</div>
+            <div class="option">Acerca</div>
+            <div class="option"><a
+                    href="https://api.whatsapp.com/send/?phone=5218713166635&text=Buenas+tardes%2C+necesito+informaci%C3%B3n+acerca+de+las+alertas+personalizadas&type=phone_number&app_absent=0">Contactanos</a>
+            </div>
+            <nav (click)="menu_event(menu)">
+                <img src="./assets/burger-menu-icon.svg" alt="menu" class="burger-menu-icon" *ngIf="statusMenu">
+                <img src="./assets/x-makeme.svg" alt="menu" class="burger-menu-icon" *ngIf="!statusMenu">
+                <div class="left">
+                    <img src="./assets/logo.png">
+                </div>
+                <div class="right">
+                    <div class="simple_button" (click)="store_event()">Tienda</div>
+                    <div class="simple_button">Acerca de nosotros</div>
+                    <div class="btn-contact"><a
+                            href="https://api.whatsapp.com/send/?phone=5218713166635&text=Buenas+tardes%2C+necesito+informaci%C3%B3n+acerca+de+las+alertas+personalizadas&type=phone_number&app_absent=0">Contactanos</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------>
+    <div class="section_1 " (click)="scroll_event(primary)">
+        <!-- sirve para ejecto de ventana -->
+    </div>
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="section_1_background">
         <div class="mosaicos">
@@ -32,7 +59,9 @@
         <div class="left">
             <div class="title">Controler Alert Systems</div>
             <div class="encabezado">Herramientas especializadas en alertas personalizadas.</div>
-            <div class="toAction">Conocer producto</div>
+            <div class="toAction">Conocer producto
+                <div class="focus" ></div>
+            </div>
             <div class="question">Tienes una pregunta? <span class="toForm">Get Free Form</span></div>
         </div>
         <div class="right">
@@ -63,15 +92,8 @@
         </div>
     </div>
     <!------------------------------------------------------------------------------------------------------------------>
-    <div class="section_1">
-        <!-- Este separador es la diagonal de section_1 -->
-
-    </div>
-    <!------------------------------------------------------------------------------------------------------------------>
     <div class="section_2">
         <div class="bloque-patron"></div>
-        <!-- <div class="separador_1"></div> -->
-        <!-- Este separador es la diagonal de section_2 -->
         <div class="left">
             <div class="content-animation-border">
                 <div class="content">
@@ -99,8 +121,7 @@
         <section class="title_section">
             <span class="title">No te pierdas de nada con ayuda de las alertas personalizadas</span>
             <br>
-            <div class="subtitle">Crea alertas en tus procesos o eventos personalizadas para darle una identidad a tu
-                marca y establecer patrones de seguridad.</div>
+            <div class="subtitle">Crea alertas en tus procesos o eventos personalizadas para darle una identidad a tú marca y establecer patrones de seguridad.</div>
         </section>
         <section class="content">
             <div class="left">
@@ -116,7 +137,7 @@
                     Diseño email
                 </div>
                 <div class="title">
-                    Mejora los diseños de tus correos electronicos
+                Mejora los diseños de tus correos electrónicos
                 </div>
                 <div class="normal-text">
                     Un diseño bien elaborado y profesional brinda una imagen positiva de la marca. Los correos
@@ -131,7 +152,7 @@
                     Alerta SMS
                 </div>
                 <div class="title">
-                    Mantente al dia con las alertas SMS
+                Mantente al día con las alertas SMS
                 </div>
                 <div class="normal-text">
                     Las alertas SMS son entregadas de manera casi instantánea, lo que las convierte en una opción eficaz
@@ -157,7 +178,6 @@
             <br>
             <div class="subtitle">A la medida de cada requisito</div>
         </section>
-        <!-- <div class="line"></div> -->
         <div class="content-alertas">
             <div class="left">
                 <div class="container">
@@ -207,15 +227,16 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
     </div>
-
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="section_4">
 
         <section class="title_section">
             <span class="title">Conoce los beneficios de nuestro servicio</span>
             <br>
-            <div class="subtitle">Los limites estan en la imaginacion</div>
+            <div class="subtitle">Los límites están en la imaginación</div>
         </section>
         <div class="left">
             <img src="./assets/alerta-reloj.jpg" alt="" class="alerta-img">
@@ -311,7 +332,6 @@
                 <div class="ventaja">
                     <div class="title">Respuesta Inmediata en Situaciones de Seguridad</div>
                     <div class="content">
-
                         Controler Alert Systems proporciona soluciones de seguridad adaptables para alertas instantáneas
                         en situaciones de peligro. Notifica de inmediato a las personas relevantes para garantizar una
                         respuesta rápida y efectiva.
@@ -323,10 +343,10 @@
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="section_6">
         <section class="title_section">
-            <span class="title">Adaptacion en multiples productos de software</span>
+            <span class="title">Adaptación en múltiples productos de software</span>
             <br>
             <br>
-            <div class="subtitle">Los limites estan en la imaginacion</div>
+            <div class="subtitle">Los límites están en la imaginación</div>
         </section>
         <div class="container-primary">
             <div class="left">
@@ -377,7 +397,7 @@
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="section_7">
         <section class="title_section">
-            <span class="title">Historias de exito</span>
+            <span class="title">Historias de éxito</span>
             <br>
             <div class="subtitle">Contamos con una amplia historia dentro del mercado</div>
         </section>
